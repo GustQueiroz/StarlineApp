@@ -1,9 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import LogoStarlineBlue from "../../assets/logoStarlineBlue.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./signInComponent.css";
 
@@ -15,15 +13,6 @@ const SignInComponent = () => {
   };
 
   const navigate = useNavigate();
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyBQUvUD81Kcnejm7NwlsSdlbP5R6qbf58k",
-    authDomain: "starlineimports-25396.firebaseapp.com",
-    projectId: "starlineimports-25396",
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
 
   const signInWithGoogle = async () => {
     console.log("teste");
@@ -43,9 +32,9 @@ const SignInComponent = () => {
       <form className="row full-signIn-container">
         <div className="col-lg-12 col-md-10 col-sm-12">
           <label className="col-lg-2"></label>
-          <Link to="/">
+          {/* <Link to="/">
             <img className="signIn-image" src={LogoStarlineBlue} />
-          </Link>
+          </Link> */}
         </div>
         <div className="col-lg-12 col-md-10 col-sm-12">
           <label htmlFor="inputEmail" className="form-label">
